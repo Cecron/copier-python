@@ -1,0 +1,11 @@
+package_name: my-package
+package_description: A short description of the package.
+author_name: Cecron
+author_email: Cecron@example.com
+copyright_license: "CC-BY-4.0"
+
+_exclude:
+    - ".git"
+    - "README.md"
+    # Don't match emacs backup files
+    - "*~"

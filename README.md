@@ -97,7 +97,6 @@ copyright_license? Format: yaml
 
     create  copier.yaml
     create  pyproject.toml
-    create  README.md
     create  .copier-answers.yml
 ```
 
@@ -106,7 +105,6 @@ copyright_license? Format: yaml
 ``` shell
 PS C:\> cd myproj
 PS C:\myproj> poetry install
-PS C:\myproj> poetry env ?????
 ```
 
 ### Register project and commit to git

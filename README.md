@@ -3,9 +3,24 @@
 [Copier](https://copier.readthedocs.io/) is a library for rendering project templates, which lives at [github.com/copier-org/copier](https://github.com/copier-org/copier/).
 [Poetry](https://python-poetry.org/) makes Python packaging and dependency management easy using pyproject.toml, and lives at [github.com/python-poetry/poetry](https://github.com/python-poetry/poetry/)
 
-This copier template is my first attempt at using these two tools togehter to make creating new Python projects easier.
+This copier template is my first attempt at using these two tools togehter to make creating new Python projects easier on Windows.
 
 ## Usage
+
+I'm more of a traditionalist and want the virtual environment files in a .venv directory in each project, so I have done:
+``` shell
+PS C:\> poetry config virtualenvs.in-project true
+```
+This will globally configure poetry to do so and will let me do the following:
+
+``` shell
+PS C:\> copier https://github.com/Cecron/copier-python.git myproj
+PS C:\> cd myproj
+PS C:\> poetry install
+PS C:\> py -3 -m venv .\.venv\ --prompt .  # Set virtual env prompt to show directory name
+PS C:\> .venv\Scripts\activate.ps1
+```
+
 
 To give a basic understanding of how to create and use a copier template, I'll show how the first versions of this template was created, including how to apply the template to both generate a new project and also how to update the project whith a an improved version of the template.
 
@@ -44,7 +59,7 @@ pytest = "^5.2"
 
 ``` shell
 PS C:\copier-template> type copier.yaml
-package_name: my-package
+package_name: mypackage
 package_description: A short description of the package.
 author_name: Cecron
 author_email: Cecron@example.com
@@ -81,7 +96,7 @@ PS C:\copier-template> cd ..
 PS C:\> copier copier-template myproj
 # Answer questions
 package_name? Format: yaml
-🎤 [my-package]:
+🎤 [mypackage]:
 
 package_description? Format: yaml
 🎤 [A short description of the package.]:
@@ -147,7 +162,7 @@ PS C:\copier-template> cd ..
 PS C:\> copier update myproj
 
 package_name? Format: yaml
-🎤 [my-package]:
+🎤 [mypackage]:
 
 package_description? Format: yaml
 🎤 [A short description of the package.]:

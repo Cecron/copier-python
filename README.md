@@ -21,8 +21,9 @@ PS C:\> py -3 -m venv .\.venv\ --prompt .  # Set virtual env prompt to show dire
 PS C:\> .venv\Scripts\activate.ps1
 ```
 
+# A walk through of how to create this simple Copier template
 
-To give a basic understanding of how to create and use a copier template, I'll show how the first versions of this template was created, including how to apply the template to both generate a new project and also how to update the project whith a an improved version of the template.
+To give a basic understanding of how to create and use a Copier template, I'll show how the first versions of this template was created, including how to apply the template to both generate a new project and also how to update the project whith a an improved version of the template.
 
 ### Create a directory to place the template in
 

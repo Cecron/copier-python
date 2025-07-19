@@ -17,7 +17,7 @@ C:\> copier copy --trust https://github.com/Cecron/copier-python.git my-proj
 
 Update the project by using the `copier update` command.
 ``` shell
-C:\> copier update myproj
+C:\> copier update --trust my-proj
 ```
 
 # Development
@@ -29,24 +29,40 @@ C:\> git clone git@github.com:Cecron/copier-python
 
 2. Generate a project from a local copy of the copier-python template
 ``` shell
-C:\> copier copy --vcs-ref=HEAD copier-python example-proj
+C:\> copier copy --trust --vcs-ref=HEAD copier-python example-proj
 ```
 
-3. Go into the template and edit
+3. Go into the template directory and edit some files in the template
 ``` shell
 C:\> cd copier-python
 ```
 
+4. Generate a new project based on the new template
+``` shell
+C:\> cd ..
+C:\> copier copy --trust --vcs-ref=HEAD copier-python new-example-proj
+```
 
-4. Update the generated project
+5. Update the generated project
+Before running `copier update`, we now need to commit the template.
+``` shell
+C:\> cd copier-python
+C:\> git add . && git commit
+```
+
 We need to stand in the same directory as when the project was generated, since the path to the template in `.copier-answers.yml` is relative.
 
 ``` shell
 C:\copier-template> cd ..
-C:\> copier update
+C:\> copier update --trust --pretend --skip-answered --vcs-ref=HEAD example-proj
 ```
-To update to the latest commit, add `--vcs-ref=HEAD`.
 
+Useful arguments to Copier:
+
+**--skip-answered**: Skip questions that have already been answered
+**--vcs-ref HEAD**: Checkout latest version
+**--trust**: Allow templates with unsafe features (tasks)
+**--pretend**: Run but do not make any changes
 
 5. When done, commit, add a tag, and push
 ``` shell
@@ -55,71 +71,4 @@ C:\copier-template> git add .
 C:\copier-template> git commit -m "Update template"
 C:\copier-template> git tag -a 0.1.0 -m "New release"
 C:\copier-template> git push origin
-```
-
-
-
-### Update the project from the template
-
-You need to stand in the same directory as when you created the project,
-since the path to the template in `.copier-answers.yml` is relative
-
-``` shell
-PS C:\copier-template> cd ..
-PS C:\> copier update myproj
-
-package_name? Format: yaml
-🎤 [mypackage]:
-
-package_description? Format: yaml
-🎤 [A short description of the package.]:
-
-author_name? Format: yaml
-🎤 [Cecron]:
-
-author_email? Format: yaml
-🎤 [Cecron@example.com]:
-
-copyright_license? Format: yaml
-🎤 [CC-BY-4.0]:
-
-    create  .gitignore
- identical  copier.yaml
- identical  pyproject.toml
-  conflict  .copier-answers.yml
- Overwrite C:\proj\python\copier\tagtest\myproj\.copier-answers.yml? [Y/n]
-     force  .copier-answers.yml
-```
-
-### Review changes made, and commit
-
-``` shell
-(copier) PS C:\myproj> git status
-On branch main
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   .copier-answers.yml
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        .gitignore
-
-no changes added to commit (use "git add" and/or "git commit -a")
-
-PS C:\> cd myproj
-PS C:\myproj> git diff
-diff --git a/.copier-answers.yml b/.copier-answers.yml
-index 2850703..ba49cb9 100644
---- a/.copier-answers.yml
-+++ b/.copier-answers.yml
-@@ -1,5 +1,5 @@
- # Changes here will be overwritten by Copier
--_commit: 1b4d418
-+_commit: a86b2dd^M
- _src_path: copier-template
- author_email: Cecron@example.com
- author_name: Cecron
-PS C:\> git add .gitignore
-PS C:\> git commit -a -m "Updated to template v0.2.0"
 ```

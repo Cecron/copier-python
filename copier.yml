@@ -31,7 +31,20 @@ package_description:
 #     - "CC-BY-4.0"
 #   default: "CC-BY_4.0"
 
+initialize_git:
+  type: bool
+  help: Should this project be initialized as a git repository?
+  default: true
+
 # _exclude:
 #     - ".git"
 #     # Don't match emacs backup files
 #     - "*~"
+
+_tasks:
+  - working_directory: "."
+    command: "git init && git add ."
+    when: "{{ initialize_git and _copier_operation == 'copy' }}"
+  - working_directory: "{{ project_dir }}"
+    command: "git commit -m \"Initial Commit\""
+    when: "{{ initialize_git and _copier_operation == 'copy' }}"

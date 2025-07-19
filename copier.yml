@@ -1,0 +1,37 @@
+# "Well-known" variables that a user is likely to have set
+user_name:
+  type: str
+  help: Author's full name
+  default: John Doe
+
+user_email:
+  type: str
+  help: Author's email address
+  default: john.doe@example.com
+
+project_name:
+  type: str
+  help: What is the name of the project?
+  default: My Example Project
+
+package_name:
+  type: str
+  help: What should the package be named?
+  default: "{{ project_name|lower|replace(' ', '-') }}"
+
+package_description:
+  type: str
+  help: Give a short description of the package.
+  default: A tiny example project.
+
+# copyright_license:
+#   type: str
+#   help: Which license should be used?
+#   choices:
+#     - "CC-BY-4.0"
+#   default: "CC-BY_4.0"
+
+# _exclude:
+#     - ".git"
+#     # Don't match emacs backup files
+#     - "*~"

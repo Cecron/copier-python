@@ -1,3 +1,5 @@
+_min_copier_version: "9.8.0"
+
 # "Well-known" variables that a user is likely to have set
 user_name:
   type: str
@@ -14,15 +16,26 @@ project_name:
   help: What is the name of the project?
   default: My Example Project
 
+project_slug:
+  type: str
+  help: What should the project slug be (no spaces allowed)?
+  default: "{{ project_name|lower|replace(' ', '-') }}"
+
 package_name:
   type: str
-  help: What should the package be named?
-  default: "{{ project_name|lower|replace(' ', '-') }}"
+  help: What should the package directory be named?
+  default: "{{ project_slug|replace('-', '_') }}"
 
 package_description:
   type: str
   help: Give a short description of the package.
   default: A tiny example project.
+
+use_subcommands:
+  type: bool
+  help: Should I prepare this project for implementing subcommands?
+  default: true
+
 
 # copyright_license:
 #   type: str
@@ -31,9 +44,9 @@ package_description:
 #     - "CC-BY-4.0"
 #   default: "CC-BY_4.0"
 
-initialize_git:
+pip_in_venv:
   type: bool
-  help: Should this project be initialized as a git repository?
+  help: Should pip be installed into .venv?
   default: true
 
 # _exclude:
@@ -44,7 +57,12 @@ initialize_git:
 _tasks:
   - working_directory: "."
     command: "git init && git add ."
-    when: "{{ initialize_git and _copier_operation == 'copy' }}"
+    when: "{{ _copier_operation == 'copy' }}"
   - working_directory: "{{ project_dir }}"
     command: "git commit -m \"Initial Commit\""
-    when: "{{ initialize_git and _copier_operation == 'copy' }}"
+    when: "{{ _copier_operation == 'copy' }}"
+  - working_directory: "{{ project_dir }}"
+    command: uv venv --seed
+    when: "{{ pip_in_venv and _copier_operation == 'copy' }}"
+  - working_directory: "{{ project_dir }}"
+    command: uv sync

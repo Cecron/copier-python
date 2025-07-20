@@ -1,0 +1,93 @@
+* Things to fix
+
+** DONE Optional inclusion of command directory
+CLOSED: [2025-07-20 Sun 20:51]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-20 Sun 20:51]
+- State "ACTIVE"     from "TODO"       [2025-07-20 Sun 19:50]
+- State "TODO"       from              [2025-07-20 Sun 19:49]
+:END:
+
+** TODO Add tests to the copier template
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 20:01]
+:END:
+
+Run copier copy with different answers:
+- use_subcommands :: y/n
+
+Run generated project:
+- script hello -n Mister
+- python -m package_name
+- python -m package_name hello -n Fred
+- python -m package_name -vv
+
+** TODO Add selection of multiple backends
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 21:09]
+:END:
+Select between:
+- setuptools
+- uv
+
+** TODO Add selection of multiple Licenses
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 19:54]
+:END:
+Select between:
+- CC-BY-4
+- MIT
+
+** TODO Add pytest test in skeleton
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 19:57]
+:END:
+Will this initially be run using tox?
+
+** TODO Convert =print= statement in =command/hello.py= into debug log
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 20:22]
+:END:
+
+** TODO Run Black/Ruff on template code
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 20:17]
+:END:
+
+** TODO Add Sphinx documentation
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 19:57]
+:END:
+Will this initially be run using tox?
+
+** TODO Help text should print package name instead of =__main__.py=
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 19:45]
+:END:
+
+#+begin_src shell
+  (example-copier-python) c:\proj\copier\example-copier-python>python -m my_example_project
+  usage: __main__.py [-h] [-v] [-q]
+
+  options:
+    -h, --help     show this help message and exit
+    -v, --verbose  Increase verbosity (debug level) by one.
+    -q, --quiet    Decrease verbosity (debug level) by one.
+  Invoked with Namespace(log_level='WARNING', action=None)
+#+end_src
+
+
+** TODO Script named =package_name= should be registered
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 19:46]
+:END:
+#+begin_example
+  Use from command-line:
+
+  ```shell
+  {{ package_name }}
+  # or
+  python -m {{ package_name }}
+
+  ```
+#+end_example

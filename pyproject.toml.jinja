@@ -1,9 +1,25 @@
 [build-system]
-requires = ["uv-build"]
-build-backend = "uv_build"
+requires = ["setuptools>=75.3.0"]
+build-backend = "setuptools.build_meta"
+# requires = ["uv-build"]
+# build-backend = "uv_build"
+
+[dependency-groups]
+dev = ["pytest"]
 
 [project]
-name = "{{ package_name }}"
+name = "{{ project_slug }}"
 version = "0.0.1"
-requires-python = "==3.13.*"
+requires-python = ">=3.12"
 dependencies = []
+# dynamic = ["version"]
+
+# [project.scripts]
+# ssay = "snakesay.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# [tool.setuptools.dynamic]
+# version = {attr = "snakesay.__version__"}
+

@@ -25,7 +25,7 @@ Run generated project:
 - State "TODO"       from              [2025-07-20 Sun 19:57]
 :END:
 Will this initially be run using tox?
-
+- [ ] Include README.md (convert to rst?)
 ** TODO Add isort (using ruff?)
 :LOGBOOK:
 - State "TODO"       from              [2025-07-21 Mon 15:38]
@@ -66,9 +66,12 @@ It looks good when invoking as a script, but not when using -m:
     -q, --quiet    Decrease verbosity (debug level) by one.
   Invoked with Namespace(log_level='WARNING', action=None)
 #+end_src
-** TODO What happens when we do "uv bump version"?
+** DONE What happens when we do "uv bump version"?
+CLOSED: [2025-07-21 Mon 17:37]
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 17:37]
 - State "TODO"       from              [2025-07-21 Mon 16:19]
 :END:
 uv version --bump patch
 error: We cannot get or set dynamic project versions in: pyproject.toml
+Reverted to using version number in pyproject.toml

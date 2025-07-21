@@ -13,11 +13,11 @@ requires-python = ">=3.12"
 dependencies = []
 dynamic = ["version"]
 
-# [project.scripts]
-# ssay = "snakesay.__main__:main"
+[project.scripts]
+{{ project_slug }} = "{{ package_name }}.cli:main"
 
 [tool.setuptools.dynamic]
-version = {attr = "{{package_name}}.__version__"}
+version = {attr = "{{ package_name }}.__version__"}
 
 [tool.setuptools.packages.find]
 where = ["src"]

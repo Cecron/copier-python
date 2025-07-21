@@ -1,0 +1,63 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file c:/proj/copier/copier-python/TODO.org
+
+
+* DONE Script named =package_name= should be registered
+CLOSED: [2025-07-21 Mon 11:17]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 11:18
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 11:17]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 11:11]
+- State "TODO"       from              [2025-07-20 Sun 19:46]
+:END:
+#+begin_example
+  Use from command-line:
+
+  ```shell
+  {{ package_name }}
+  # or
+  python -m {{ package_name }}
+
+  ```
+#+end_example
+
+
+* DONE Optional inclusion of command directory
+CLOSED: [2025-07-20 Sun 20:51]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 11:18
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-20 Sun 20:51]
+- State "ACTIVE"     from "TODO"       [2025-07-20 Sun 19:50]
+- State "TODO"       from              [2025-07-20 Sun 19:49]
+:END:
+
+
+* DONE Use dynamic version
+CLOSED: [2025-07-21 Mon 09:50]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 11:18
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 09:50]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 09:00]
+- State "TODO"       from              [2025-07-21 Mon 09:00]
+:END:
+

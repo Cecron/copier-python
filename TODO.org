@@ -30,18 +30,17 @@ Select between:
 - CC-BY-4
 - MIT
 
-** DONE Add pytest test in skeleton
-CLOSED: [2025-07-21 Mon 12:14]
+** DONE Add coverage in the skeleton
+CLOSED: [2025-07-21 Mon 14:18]
 :LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 12:14]
-- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 11:24]
-- State "TODO"       from              [2025-07-20 Sun 19:57]
-:END:
-Will this initially be run using tox?
-
-** TODO Add coverage in the skeleton
-:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 14:18]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 13:27]
 - State "TODO"       from              [2025-07-21 Mon 12:14]
+:END:
+
+** TODO Add linters in the skeleton
+:LOGBOOK:
+- State "TODO"       from              [2025-07-21 Mon 14:18]
 :END:
 
 ** TODO Convert =print= statement in =command/hello.py= into debug log
@@ -76,3 +75,7 @@ Will this initially be run using tox?
   Invoked with Namespace(log_level='WARNING', action=None)
 #+end_src
 
+** TODO Add typing and typing check to skeleton
+:LOGBOOK:
+- State "TODO"       from              [2025-07-21 Mon 14:19]
+:END:

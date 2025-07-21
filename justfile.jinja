@@ -1,0 +1,28 @@
+{% raw %}
+set dotenv-load
+
+ARGS_TEST := env("_UV_RUN_ARGS_TEST", "")
+
+@_:
+    just --list
+
+# Run tests
+[group('qa')]
+test *args:
+    uv run {{ ARGS_TEST }} -m pytest {{ args }}
+
+_cov *args:
+    uv run -m coverage {{ args }}
+{% endraw %}
+# Run tests and measure coverage
+[group('qa')]
+@cov:
+    just _cov erase
+    just _cov run -m pytest tests
+    # Ensure entrypoint is importable.
+    # You can also use coverage to run your CLI entrypoints.
+    just _cov run -m {{ package_name }} hello -n Everyone
+    just _cov combine
+    just _cov report
+    just _cov html
+

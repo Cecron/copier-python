@@ -61,3 +61,20 @@ CLOSED: [2025-07-21 Mon 09:50]
 - State "TODO"       from              [2025-07-21 Mon 09:00]
 :END:
 
+
+* DONE Add pytest test in skeleton
+CLOSED: [2025-07-21 Mon 12:14]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 14:18
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 12:14]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 11:24]
+- State "TODO"       from              [2025-07-20 Sun 19:57]
+:END:
+Will this initially be run using tox?
+

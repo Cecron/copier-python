@@ -5,7 +5,14 @@ build-backend = "setuptools.build_meta"
 # build-backend = "uv_build"
 
 [dependency-groups]
-dev = ["pytest"]
+# docs = ["sphinx"]
+# check = ["mypy", "isort", "ruff"]
+test = ["pytest>=8.4"]
+
+dev = [
+    {include-group = "test"},
+    # {include-group = "docs"},
+    ]
 
 [project]
 name = "{{ project_slug }}"

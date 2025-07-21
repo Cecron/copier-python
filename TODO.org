@@ -38,8 +38,10 @@ CLOSED: [2025-07-21 Mon 14:18]
 - State "TODO"       from              [2025-07-21 Mon 12:14]
 :END:
 
-** TODO Add linters in the skeleton
+** DONE Add linters in the skeleton
+CLOSED: [2025-07-21 Mon 15:01]
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 15:01]
 - State "TODO"       from              [2025-07-21 Mon 14:18]
 :END:
 
@@ -48,8 +50,10 @@ CLOSED: [2025-07-21 Mon 14:18]
 - State "TODO"       from              [2025-07-20 Sun 20:22]
 :END:
 
-** TODO Run Black/Ruff on template code
+** DONE Run Black/Ruff on template code
+CLOSED: [2025-07-21 Mon 15:01]
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 15:01]
 - State "TODO"       from              [2025-07-20 Sun 20:17]
 :END:
 

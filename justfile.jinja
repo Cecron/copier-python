@@ -6,7 +6,7 @@ ARGS_TEST := env("_UV_RUN_ARGS_TEST", "")
 @_:
     just --list
 
-# Run tests
+# run tests
 [group('qa')]
 test *args:
     uv run {{ ARGS_TEST }} -m pytest {{ args }}
@@ -14,7 +14,7 @@ test *args:
 _cov *args:
     uv run -m coverage {{ args }}
 {% endraw %}
-# Run tests and measure coverage
+# run tests and measure coverage
 [group('qa')]
 @cov:
     just _cov erase
@@ -26,3 +26,23 @@ _cov *args:
     just _cov report
     just _cov html
 
+# run linters
+[group('qa')]
+lint:
+    uvx ruff check
+    uvx ruff format
+
+# perform all checks
+[group('qa')]
+check-all: lint cov
+
+# Remove temporary files
+[group('lifecycle')]
+clean:
+    rm -rf .venv .pytest_cache .ruff_cache .coverage htmlcov
+    rm -rf src/*.egg-info
+    find . -type d -name "__pycache__" -exec rm -r {} +
+
+# Recreate project virtualenv from nothing
+[group('lifecycle')]
+fresh: clean install

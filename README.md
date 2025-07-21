@@ -3,7 +3,15 @@
 [Copier](https://copier.readthedocs.io/) is a library for rendering project templates, which lives at [github.com/copier-org/copier](https://github.com/copier-org/copier/). This template has been updated to be used with Copier v.9.8.0
 [Uv](https://docs.astral.sh/uv/) makes Python packaging and dependency management easy using pyproject.toml.
 
-This Copier template is my first attempt at using these two tools togehter to make creating new Python projects easier on Windows.
+This Copier template is my attempt at using these tools to make creating new Python projects easier on Windows and Linux.
+
+## Requirement
+The following needs to be installed:
+1. git: [git for Windows](https://git-scm.com/downloads/win)
+   Add path to `Git\usr\bin` *first* on Windows path (so correct version of `find` is used).
+2. [uv](https://docs.astral.sh/uv/getting-started/installation/)
+3. Copier: `uv tool install copier`
+
 
 ## Generating a project
 
@@ -57,12 +65,15 @@ C:\copier-template> cd ..
 C:\> copier update --trust --pretend --skip-answered --vcs-ref=HEAD example-proj
 ```
 
-Useful arguments to Copier:
-
-**--skip-answered**: Skip questions that have already been answered
-**--vcs-ref HEAD**: Checkout latest version
+Useful arguments to `copier`:
 **--trust**: Allow templates with unsafe features (tasks)
-**--pretend**: Run but do not make any changes
+**-r, --vcs-ref HEAD**: Checkout latest version
+**-n, --pretend**: Run but do not make any changes
+**-l, --defaults**: Use default answers to all questions
+
+Useful arguments to `copier update`:
+**--skip-answered**: Skip questions that have already been answered
+
 
 5. When done, commit, add a tag, and push
 ``` shell

@@ -14,13 +14,22 @@ Run generated project:
 - python -m package_name hello -n Fred
 - python -m package_name -vv
 
-** TODO Add selection of multiple backends
+** TODO Convert =print= statement in =command/hello.py= into debug log
 :LOGBOOK:
-- State "TODO"       from              [2025-07-20 Sun 21:09]
+- State "TODO"       from              [2025-07-20 Sun 20:22]
 :END:
-Select between:
-- setuptools
-- uv
+
+** ACTIVE Add Sphinx documentation
+:LOGBOOK:
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 15:37]
+- State "TODO"       from              [2025-07-20 Sun 19:57]
+:END:
+Will this initially be run using tox?
+
+** TODO Add isort (using ruff?)
+:LOGBOOK:
+- State "TODO"       from              [2025-07-21 Mon 15:38]
+:END:
 
 ** TODO Add selection of multiple Licenses
 :LOGBOOK:
@@ -30,44 +39,23 @@ Select between:
 - CC-BY-4
 - MIT
 
-** DONE Add coverage in the skeleton
-CLOSED: [2025-07-21 Mon 14:18]
+** TODO Add selection of multiple backends
 :LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 14:18]
-- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 13:27]
-- State "TODO"       from              [2025-07-21 Mon 12:14]
+- State "TODO"       from              [2025-07-20 Sun 21:09]
 :END:
+Select between:
+- setuptools
+- uv
 
-** DONE Add linters in the skeleton
-CLOSED: [2025-07-21 Mon 15:01]
+** TODO Add typing and typing check to skeleton
 :LOGBOOK:
-- State "DONE"       from "TODO"       [2025-07-21 Mon 15:01]
-- State "TODO"       from              [2025-07-21 Mon 14:18]
+- State "TODO"       from              [2025-07-21 Mon 14:19]
 :END:
-
-** TODO Convert =print= statement in =command/hello.py= into debug log
-:LOGBOOK:
-- State "TODO"       from              [2025-07-20 Sun 20:22]
-:END:
-
-** DONE Run Black/Ruff on template code
-CLOSED: [2025-07-21 Mon 15:01]
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2025-07-21 Mon 15:01]
-- State "TODO"       from              [2025-07-20 Sun 20:17]
-:END:
-
-** TODO Add Sphinx documentation
-:LOGBOOK:
-- State "TODO"       from              [2025-07-20 Sun 19:57]
-:END:
-Will this initially be run using tox?
-
 ** TODO Help text should print package name instead of =__main__.py=
 :LOGBOOK:
 - State "TODO"       from              [2025-07-20 Sun 19:45]
 :END:
-
+It looks good when invoking as a script, but not when using -m:
 #+begin_src shell
   (example-copier-python) c:\proj\copier\example-copier-python>python -m my_example_project
   usage: __main__.py [-h] [-v] [-q]
@@ -78,8 +66,9 @@ Will this initially be run using tox?
     -q, --quiet    Decrease verbosity (debug level) by one.
   Invoked with Namespace(log_level='WARNING', action=None)
 #+end_src
-
-** TODO Add typing and typing check to skeleton
+** TODO What happens when we do "uv bump version"?
 :LOGBOOK:
-- State "TODO"       from              [2025-07-21 Mon 14:19]
+- State "TODO"       from              [2025-07-21 Mon 16:19]
 :END:
+uv version --bump patch
+error: We cannot get or set dynamic project versions in: pyproject.toml

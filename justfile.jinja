@@ -36,11 +36,28 @@ lint:
 [group('qa')]
 check-all: lint cov
 
-# Remove temporary files
+# run sphinx to build html documentation
+[group('docs')]
+html:
+    sphinx-build -M html "docs/source" "docs/build"
+
+# upgrade dependencies
+[group('lifecycle')]
+upgrade:
+    uv sync --upgrade
+
+# ensure project virtualenv is up to date
+[group('lifecycle')]
+install:
+    if [ ! -d ".venv" ]; then uv venv --seed; fi
+    uv sync
+
+# remove temporary files
 [group('lifecycle')]
 clean:
     rm -rf .venv .pytest_cache .ruff_cache .coverage htmlcov
     rm -rf src/*.egg-info
+    rm -rf docs/build
     find . -type d -name "__pycache__" -exec rm -r {} +
 
 # Recreate project virtualenv from nothing

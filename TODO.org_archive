@@ -78,3 +78,49 @@ CLOSED: [2025-07-21 Mon 12:14]
 :END:
 Will this initially be run using tox?
 
+
+* DONE Add coverage in the skeleton
+CLOSED: [2025-07-21 Mon 14:18]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 15:06
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 14:18]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 13:27]
+- State "TODO"       from              [2025-07-21 Mon 12:14]
+:END:
+
+
+* DONE Add linters in the skeleton
+CLOSED: [2025-07-21 Mon 15:01]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 15:06
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 15:01]
+- State "TODO"       from              [2025-07-21 Mon 14:18]
+:END:
+
+
+* DONE Run Black/Ruff on template code
+CLOSED: [2025-07-21 Mon 15:01]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 15:06
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 15:01]
+- State "TODO"       from              [2025-07-20 Sun 20:17]
+:END:
+

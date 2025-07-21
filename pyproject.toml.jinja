@@ -9,17 +9,15 @@ dev = ["pytest"]
 
 [project]
 name = "{{ project_slug }}"
-version = "0.0.1"
 requires-python = ">=3.12"
 dependencies = []
-# dynamic = ["version"]
+dynamic = ["version"]
 
 # [project.scripts]
 # ssay = "snakesay.__main__:main"
 
+[tool.setuptools.dynamic]
+version = {attr = "{{package_name}}.__version__"}
+
 [tool.setuptools.packages.find]
 where = ["src"]
-
-# [tool.setuptools.dynamic]
-# version = {attr = "snakesay.__version__"}
-

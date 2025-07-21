@@ -1,13 +1,5 @@
 * Things to fix
 
-** DONE Optional inclusion of command directory
-CLOSED: [2025-07-20 Sun 20:51]
-:LOGBOOK:
-- State "DONE"       from "ACTIVE"     [2025-07-20 Sun 20:51]
-- State "ACTIVE"     from "TODO"       [2025-07-20 Sun 19:50]
-- State "TODO"       from              [2025-07-20 Sun 19:49]
-:END:
-
 ** TODO Add tests to the copier template
 :LOGBOOK:
 - State "TODO"       from              [2025-07-20 Sun 20:01]
@@ -76,7 +68,6 @@ Will this initially be run using tox?
   Invoked with Namespace(log_level='WARNING', action=None)
 #+end_src
 
-
 ** TODO Script named =package_name= should be registered
 :LOGBOOK:
 - State "TODO"       from              [2025-07-20 Sun 19:46]
@@ -91,3 +82,21 @@ Will this initially be run using tox?
 
   ```
 #+end_example
+
+* Fixed thinhgs
+** DONE Optional inclusion of command directory
+CLOSED: [2025-07-20 Sun 20:51]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-20 Sun 20:51]
+- State "ACTIVE"     from "TODO"       [2025-07-20 Sun 19:50]
+- State "TODO"       from              [2025-07-20 Sun 19:49]
+:END:
+
+** DONE Use dynamic version
+CLOSED: [2025-07-21 Mon 09:50]
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 09:50]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 09:00]
+- State "TODO"       from              [2025-07-21 Mon 09:00]
+:END:
+

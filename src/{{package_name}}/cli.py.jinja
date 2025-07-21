@@ -1,10 +1,9 @@
 import argparse
 import logging
 
+from . import __version__
 from . import app
-{% if use_subcommands %}
-from . import commands
-{% endif %}
+{% if use_subcommands %}from . import commands{% endif %}
 
 LOG_LEVELS = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
 DEFAULT_LOG_LEVEL = "WARNING"
@@ -18,14 +17,18 @@ def parse_args(argv):
     # Global arguments are defined here
     parser.add_argument(
         '-v', '--verbose', dest="log_level", action="append_const", const=-1,
-        help="Increase verbosity (debug level) by one.",
+        help="increase verbosity (debug level) by one",
     )
     parser.add_argument(
         '-q', '--quiet', dest="log_level", action="append_const", const=1,
-        help="Decrease verbosity (debug level) by one.",
+        help="decrease verbosity (debug level) by one",
     )
-
-    {% if use_subcommands %}
+    parser.add_argument(
+        '--version',
+        action="version",
+        version=__version__,
+    )
+{% if use_subcommands %}
     # Read in subcommands from the commands directory
     subparsers = parser.add_subparsers(
         title='Available subcommands',
@@ -37,8 +40,7 @@ def parse_args(argv):
 
     for cmd in cmds:
         cmd.add_subparser(subparsers)
-    {% endif %}
-
+{% endif %}
     args = parser.parse_args(argv)
 
     log_level = LOG_LEVELS.index(DEFAULT_LOG_LEVEL)

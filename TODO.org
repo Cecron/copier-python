@@ -1,6 +1,19 @@
 * Things to fix
+** DONE Add isort (using ruff?)                                     :v0_4_0:
+CLOSED: [2025-07-21 Mon 18:26]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 18:26]
+- State "TODO"       from              [2025-07-21 Mon 15:38]
+:END:
+From [[https://stackoverflow.com/questions/78156811/how-do-i-isort-using-ruff][Stack overflow]]:
+use ruff check --select I,RUF022 --fix . to also apply sorting to __all__
 
-** TODO Add tests to the copier template
+** TODO Convert =print= statement in =command/hello.py= into debug log  :v0_4_0:
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 20:22]
+:END:
+
+** TODO Add tests to the copier template                            :v0_5_0:
 :LOGBOOK:
 - State "TODO"       from              [2025-07-20 Sun 20:01]
 :END:
@@ -14,24 +27,7 @@ Run generated project:
 - python -m package_name hello -n Fred
 - python -m package_name -vv
 
-** TODO Convert =print= statement in =command/hello.py= into debug log
-:LOGBOOK:
-- State "TODO"       from              [2025-07-20 Sun 20:22]
-:END:
-
-** ACTIVE Add Sphinx documentation
-:LOGBOOK:
-- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 15:37]
-- State "TODO"       from              [2025-07-20 Sun 19:57]
-:END:
-Will this initially be run using tox?
-- [ ] Include README.md (convert to rst?)
-** TODO Add isort (using ruff?)
-:LOGBOOK:
-- State "TODO"       from              [2025-07-21 Mon 15:38]
-:END:
-
-** TODO Add selection of multiple Licenses
+** TODO Add selection of multiple Licenses                          :v0_5_0:
 :LOGBOOK:
 - State "TODO"       from              [2025-07-20 Sun 19:54]
 :END:
@@ -39,20 +35,31 @@ Select between:
 - CC-BY-4
 - MIT
 
-** TODO Add selection of multiple backends
+** TODO Add Sphinx documentation                                    :v0_6_0:
 :LOGBOOK:
+- State "TODO"       from "ACTIVE"     [2025-07-21 Mon 17:56]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 15:37]
+- State "TODO"       from              [2025-07-20 Sun 19:57]
+:END:
+Will this initially be run using tox?
+- [ ] Include README.md (convert to rst?)
+** MAYBE Add selection of multiple backends
+:LOGBOOK:
+- State "MAYBE"      from "TODO"       [2025-07-21 Mon 17:55]
 - State "TODO"       from              [2025-07-20 Sun 21:09]
 :END:
 Select between:
 - setuptools
 - uv
 
-** TODO Add typing and typing check to skeleton
+** MAYBE Add typing and typing check to skeleton
 :LOGBOOK:
+- State "MAYBE"      from "TODO"       [2025-07-21 Mon 17:56]
 - State "TODO"       from              [2025-07-21 Mon 14:19]
 :END:
-** TODO Help text should print package name instead of =__main__.py=
+** MAYBE Help text should print package name instead of =__main__.py=
 :LOGBOOK:
+- State "MAYBE"      from "TODO"       [2025-07-21 Mon 17:57]
 - State "TODO"       from              [2025-07-20 Sun 19:45]
 :END:
 It looks good when invoking as a script, but not when using -m:
@@ -66,12 +73,4 @@ It looks good when invoking as a script, but not when using -m:
     -q, --quiet    Decrease verbosity (debug level) by one.
   Invoked with Namespace(log_level='WARNING', action=None)
 #+end_src
-** DONE What happens when we do "uv bump version"?
-CLOSED: [2025-07-21 Mon 17:37]
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2025-07-21 Mon 17:37]
-- State "TODO"       from              [2025-07-21 Mon 16:19]
-:END:
-uv version --bump patch
-error: We cannot get or set dynamic project versions in: pyproject.toml
-Reverted to using version number in pyproject.toml
+Check if this is a bug in Python.

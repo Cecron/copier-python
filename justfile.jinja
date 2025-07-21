@@ -29,7 +29,7 @@ _cov *args:
 # run linters
 [group('qa')]
 lint:
-    uvx ruff check
+    uvx ruff check --fix
     uvx ruff format
 
 # perform all checks

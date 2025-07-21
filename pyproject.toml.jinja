@@ -44,5 +44,29 @@ testpaths = [
     "tests",
 ]
 
+[tool.ruff]
+# Same as Black.
+line-length = 88
+indent-width = 4
+
+# Assume Python 3.13
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    #"E",
+    # Pyflakes
+    #"F",
+    # pyupgrade
+    #"UP",
+    # flake8-bugbear
+    #"B",
+    # flake8-simplify
+    #"SIM",
+    # isort
+    #"I",
+]
+
 [tool.setuptools.packages.find]
 where = ["src"]

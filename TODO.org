@@ -1,6 +1,8 @@
 * Things to fix
-** TODO Convert =print= statement in =command/hello.py= into debug log  :v0_4_0:
+** DONE Convert =print= statement in =command/hello.py= into debug log  :v0_4_0:
+CLOSED: [2025-07-22 Tue 13:14]
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-22 Tue 13:14]
 - State "TODO"       from              [2025-07-20 Sun 20:22]
 :END:
 

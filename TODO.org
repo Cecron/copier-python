@@ -1,13 +1,4 @@
 * Things to fix
-** DONE Add isort (using ruff?)                                     :v0_4_0:
-CLOSED: [2025-07-21 Mon 18:26]
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2025-07-21 Mon 18:26]
-- State "TODO"       from              [2025-07-21 Mon 15:38]
-:END:
-From [[https://stackoverflow.com/questions/78156811/how-do-i-isort-using-ruff][Stack overflow]]:
-use ruff check --select I,RUF022 --fix . to also apply sorting to __all__
-
 ** TODO Convert =print= statement in =command/hello.py= into debug log  :v0_4_0:
 :LOGBOOK:
 - State "TODO"       from              [2025-07-20 Sun 20:22]

@@ -152,3 +152,20 @@ Possible values for =uv version --bump VALUE=:
 - rc :: Increase the rc version (e.g., 1.2.3rc4 => 1.2.3rc5)
 - post :: Increase the post version (e.g., 1.2.3.post5 => 1.2.3.post6)
 - dev :: Increase the dev version (e.g., 1.2.3a4.dev6 => 1.2.3.dev7)
+
+* DONE Add isort (using ruff?)                                       :v0_4_0:
+CLOSED: [2025-07-21 Mon 18:26]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 18:31
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 18:26]
+- State "TODO"       from              [2025-07-21 Mon 15:38]
+:END:
+From [[https://stackoverflow.com/questions/78156811/how-do-i-isort-using-ruff][Stack overflow]]:
+use ruff check --select I,RUF022 --fix . to also apply sorting to __all__
+

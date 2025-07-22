@@ -1,4 +1,5 @@
 _min_copier_version: "9.8.0"
+_subdirectory: template
 
 # "Well-known" variables that a user is likely to have set
 user_name:

@@ -169,3 +169,18 @@ CLOSED: [2025-07-21 Mon 18:26]
 From [[https://stackoverflow.com/questions/78156811/how-do-i-isort-using-ruff][Stack overflow]]:
 use ruff check --select I,RUF022 --fix . to also apply sorting to __all__
 
+
+* DONE Convert =print= statement in =command/hello.py= into debug log    :v0_4_0:
+CLOSED: [2025-07-22 Tue 13:14]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-22 Tue 18:44
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-22 Tue 13:14]
+- State "TODO"       from              [2025-07-20 Sun 20:22]
+:END:
+

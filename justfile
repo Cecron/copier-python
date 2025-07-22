@@ -22,6 +22,6 @@ clean:
     rm -rf .venv .pytest_cache
     find . -type d -name "__pycache__" -exec rm -r {} +
 
-# recreate project virtualenv from nothing
+# regenerate project from scratch
 [group('lifecycle')]
 fresh: clean install

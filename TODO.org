@@ -1,13 +1,8 @@
 * Things to fix
-** DONE Convert =print= statement in =command/hello.py= into debug log  :v0_4_0:
-CLOSED: [2025-07-22 Tue 13:14]
+** DONE Add tests to the copier template                            :v0_5_0:
+CLOSED: [2025-07-22 Tue 18:41]
 :LOGBOOK:
-- State "DONE"       from "TODO"       [2025-07-22 Tue 13:14]
-- State "TODO"       from              [2025-07-20 Sun 20:22]
-:END:
-
-** TODO Add tests to the copier template                            :v0_5_0:
-:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-22 Tue 18:41]
 - State "TODO"       from              [2025-07-20 Sun 20:01]
 :END:
 
@@ -19,6 +14,20 @@ Run generated project:
 - python -m package_name
 - python -m package_name hello -n Fred
 - python -m package_name -vv
+** DONE Add detailed description in README.md.jinja                 :v0_5_0:
+CLOSED: [2025-07-22 Tue 22:40]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-22 Tue 22:40]
+- State "TODO"       from              [2025-07-22 Tue 18:41]
+:END:
+Describe how you use the Just recipes during python development.
+
+** ACTIVE Add detailed description in README.md                     :v0_5_0:
+:LOGBOOK:
+- State "ACTIVE"     from "TODO"       [2025-07-22 Tue 22:40]
+- State "TODO"       from              [2025-07-22 Tue 18:41]
+:END:
+Describe how you use the Just recipes during template development.
 
 ** TODO Add selection of multiple Licenses                          :v0_5_0:
 :LOGBOOK:

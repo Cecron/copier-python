@@ -1,0 +1,10 @@
+import shlex
+
+import {{ package_name }}.cli
+import {{ package_name }}.commands
+
+
+def test_hello():
+    args = {{ package_name }}.cli.parse_args(shlex.split("hello --name there"))
+    assert isinstance(args.action, {{ package_name }}.commands.Hello)
+    assert args.name == "there"

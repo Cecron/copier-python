@@ -1,0 +1,69 @@
+* Things to fix
+** DONE Convert =print= statement in =command/hello.py= into debug log  :v0_4_0:
+CLOSED: [2025-07-22 Tue 13:14]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-22 Tue 13:14]
+- State "TODO"       from              [2025-07-20 Sun 20:22]
+:END:
+
+** TODO Add tests to the copier template                            :v0_5_0:
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 20:01]
+:END:
+
+Run copier copy with different answers:
+- use_subcommands :: y/n
+
+Run generated project:
+- script hello -n Mister
+- python -m package_name
+- python -m package_name hello -n Fred
+- python -m package_name -vv
+
+** TODO Add selection of multiple Licenses                          :v0_5_0:
+:LOGBOOK:
+- State "TODO"       from              [2025-07-20 Sun 19:54]
+:END:
+Select between:
+- CC-BY-4
+- MIT
+
+** TODO Add Sphinx documentation                                    :v0_6_0:
+:LOGBOOK:
+- State "TODO"       from "ACTIVE"     [2025-07-21 Mon 17:56]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 15:37]
+- State "TODO"       from              [2025-07-20 Sun 19:57]
+:END:
+Will this initially be run using tox?
+- [ ] Include README.md (convert to rst?)
+** MAYBE Add selection of multiple backends
+:LOGBOOK:
+- State "MAYBE"      from "TODO"       [2025-07-21 Mon 17:55]
+- State "TODO"       from              [2025-07-20 Sun 21:09]
+:END:
+Select between:
+- setuptools
+- uv
+
+** MAYBE Add typing and typing check to skeleton
+:LOGBOOK:
+- State "MAYBE"      from "TODO"       [2025-07-21 Mon 17:56]
+- State "TODO"       from              [2025-07-21 Mon 14:19]
+:END:
+** MAYBE Help text should print package name instead of =__main__.py=
+:LOGBOOK:
+- State "MAYBE"      from "TODO"       [2025-07-21 Mon 17:57]
+- State "TODO"       from              [2025-07-20 Sun 19:45]
+:END:
+It looks good when invoking as a script, but not when using -m:
+#+begin_src shell
+  (example-copier-python) c:\proj\copier\example-copier-python>python -m my_example_project
+  usage: __main__.py [-h] [-v] [-q]
+
+  options:
+    -h, --help     show this help message and exit
+    -v, --verbose  Increase verbosity (debug level) by one.
+    -q, --quiet    Decrease verbosity (debug level) by one.
+  Invoked with Namespace(log_level='WARNING', action=None)
+#+end_src
+Check if this is a bug in Python.

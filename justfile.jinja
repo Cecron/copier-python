@@ -1,0 +1,75 @@
+{% raw %}
+set dotenv-load
+
+ARGS_TEST := env("_UV_RUN_ARGS_TEST", "")
+DOCS_PORT := env("_SPHINX_AUTOBUILD_PORT", "0")
+
+@_:
+    just --list --justfile '{{ justfile() }}'
+
+# run tests
+[group('qa')]
+test *args:
+    uv run {{ ARGS_TEST }} -m pytest {{ args }}
+
+_cov *args:
+    uv run -m coverage {{ args }}
+{% endraw %}
+# run tests and measure coverage
+[group('qa')]
+@cov:
+    just _cov erase
+    just _cov run -m pytest tests
+    # Ensure entrypoint is importable.
+    # You can also use coverage to run your CLI entrypoints.
+    just _cov run -m {{ package_name }} hello -n Everyone
+    just _cov combine
+    just _cov report
+    just _cov html
+{% raw %}
+# run linters
+[group('qa')]
+lint:
+    uvx ruff check --fix
+    uvx ruff format
+
+# perform all checks
+[group('qa')]
+check-all: lint cov
+
+# run sphinx to build html documentation
+[group('docs')]
+html:
+    sphinx-build -M html "docs/source" "docs/build"
+
+# serve html documentation
+[group('docs')]
+serve *args:
+    sphinx-autobuild --port {{ DOCS_PORT }} --open-browser {{ args }} docs/source docs/build/html
+
+# upgrade dependencies
+[group('lifecycle')]
+upgrade:
+    uv sync --upgrade
+
+# ensure project virtualenv is up to date
+[group('lifecycle')]
+install:
+    if [ ! -d ".venv" ]; then uv venv --seed; fi
+    uv sync
+
+# remove temporary files
+[group('lifecycle')]
+clean:
+    rm -rf .venv .pytest_cache .ruff_cache .coverage htmlcov
+    rm -rf src/*.egg-info
+    rm -rf docs/build
+    find . -type d -name "__pycache__" -exec rm -r {} +
+
+# Recreate project virtualenv from nothing
+[group('lifecycle')]
+fresh: clean install
+{% endraw %}
+
+# run main recepies: fresh, check-all, html
+all: fresh check-all html

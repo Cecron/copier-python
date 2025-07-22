@@ -1,0 +1,171 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file c:/proj/copier/copier-python/TODO.org
+
+
+* DONE Script named =package_name= should be registered
+CLOSED: [2025-07-21 Mon 11:17]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 11:18
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 11:17]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 11:11]
+- State "TODO"       from              [2025-07-20 Sun 19:46]
+:END:
+#+begin_example
+  Use from command-line:
+
+  ```shell
+  {{ package_name }}
+  # or
+  python -m {{ package_name }}
+
+  ```
+#+end_example
+
+
+* DONE Optional inclusion of command directory
+CLOSED: [2025-07-20 Sun 20:51]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 11:18
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-20 Sun 20:51]
+- State "ACTIVE"     from "TODO"       [2025-07-20 Sun 19:50]
+- State "TODO"       from              [2025-07-20 Sun 19:49]
+:END:
+
+
+* DONE Use dynamic version
+CLOSED: [2025-07-21 Mon 09:50]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 11:18
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 09:50]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 09:00]
+- State "TODO"       from              [2025-07-21 Mon 09:00]
+:END:
+
+
+* DONE Add pytest test in skeleton
+CLOSED: [2025-07-21 Mon 12:14]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 14:18
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 12:14]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 11:24]
+- State "TODO"       from              [2025-07-20 Sun 19:57]
+:END:
+Will this initially be run using tox?
+
+
+* DONE Add coverage in the skeleton
+CLOSED: [2025-07-21 Mon 14:18]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 15:06
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-21 Mon 14:18]
+- State "ACTIVE"     from "TODO"       [2025-07-21 Mon 13:27]
+- State "TODO"       from              [2025-07-21 Mon 12:14]
+:END:
+
+
+* DONE Add linters in the skeleton
+CLOSED: [2025-07-21 Mon 15:01]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 15:06
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 15:01]
+- State "TODO"       from              [2025-07-21 Mon 14:18]
+:END:
+
+
+* DONE Run Black/Ruff on template code
+CLOSED: [2025-07-21 Mon 15:01]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 15:06
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 15:01]
+- State "TODO"       from              [2025-07-20 Sun 20:17]
+:END:
+
+
+* DONE What happens when we do "uv bump version"?
+CLOSED: [2025-07-21 Mon 17:37]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 17:46
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 17:37]
+- State "TODO"       from              [2025-07-21 Mon 16:19]
+:END:
+uv version --bump patch
+error: We cannot get or set dynamic project versions in: pyproject.toml
+Reverted to using version number in pyproject.toml
+
+Possible values for =uv version --bump VALUE=:
+- major :: Increase the major version (e.g., 1.2.3 => 2.0.0)
+- minor :: Increase the minor version (e.g., 1.2.3 => 1.3.0)
+- patch :: Increase the patch version (e.g., 1.2.3 => 1.2.4)
+- stable :: Move from a pre-release to stable version (e.g., 1.2.3b4.post5.dev6 => 1.2.3)
+- alpha :: Increase the alpha version (e.g., 1.2.3a4 => 1.2.3a5)
+- beta :: Increase the beta version (e.g., 1.2.3b4 => 1.2.3b5)
+- rc :: Increase the rc version (e.g., 1.2.3rc4 => 1.2.3rc5)
+- post :: Increase the post version (e.g., 1.2.3.post5 => 1.2.3.post6)
+- dev :: Increase the dev version (e.g., 1.2.3a4.dev6 => 1.2.3.dev7)
+
+* DONE Add isort (using ruff?)                                       :v0_4_0:
+CLOSED: [2025-07-21 Mon 18:26]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-21 Mon 18:31
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-21 Mon 18:26]
+- State "TODO"       from              [2025-07-21 Mon 15:38]
+:END:
+From [[https://stackoverflow.com/questions/78156811/how-do-i-isort-using-ruff][Stack overflow]]:
+use ruff check --select I,RUF022 --fix . to also apply sorting to __all__
+

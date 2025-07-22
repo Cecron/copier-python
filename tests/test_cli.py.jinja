@@ -1,0 +1,11 @@
+import shlex
+
+import pytest
+
+import {{ package_name }}.cli
+
+
+def test_version(capsys):
+    with pytest.raises(SystemExit):
+        {{package_name }}.cli.main(shlex.split("--version"))
+    assert "0.0.1" in capsys.readouterr().out

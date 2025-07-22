@@ -1,3 +1,4 @@
-# Emacs backup files
-*~
-\#*\#
+__pycache__/
+*.egg-info/
+.coverage
+docs/build/

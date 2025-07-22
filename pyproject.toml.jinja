@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=75.3.0"]
+build-backend = "setuptools.build_meta"
+# requires = ["uv-build"]
+# build-backend = "uv_build"
+
+[dependency-groups]
+# check = ["mypy", "isort", "ruff"]
+docs = [
+    "sphinx>=8.2.3",
+    "sphinx_rtd_theme>=3.0.2",
+    "sphinx-autobuild>=2024.10.3",
+    ]
+test = [
+    "coverage>=7.9.2",
+    "pytest>=8.4",
+    ]
+
+dev = [
+    {include-group = "test"},
+    {include-group = "docs"},
+    ]
+
+[project]
+name = "{{ project_slug }}"
+requires-python = ">=3.12"
+dependencies = []
+version = "0.0.1"
+
+[project.scripts]
+{{ project_slug }} = "{{ package_name }}.cli:main"
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = ["{{ package_name }}", "tests"]
+
+[tool.pytest.ini_options]
+minversion = 7.0
+testpaths = [
+    "tests",
+]
+
+[tool.ruff]
+# Same as Black.
+line-length = 88
+indent-width = 4
+
+# Assume Python 3.13
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    #"E",
+    # Pyflakes
+    #"F",
+    # pyupgrade
+    #"UP",
+    # flake8-bugbear
+    #"B",
+    # flake8-simplify
+    #"SIM",
+    # isort
+    #"I",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

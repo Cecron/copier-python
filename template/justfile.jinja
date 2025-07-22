@@ -40,7 +40,7 @@ check-all: lint cov
 # run sphinx to build html documentation
 [group('docs')]
 html:
-    sphinx-build -M html "docs/source" "docs/build"
+    uv run -m sphinx -b html "docs/source" "docs/build/html"
 
 # serve html documentation
 [group('docs')]
@@ -66,7 +66,7 @@ clean:
     rm -rf docs/build
     find . -type d -name "__pycache__" -exec rm -r {} +
 
-# Recreate project virtualenv from nothing
+# recreate project virtualenv from nothing
 [group('lifecycle')]
 fresh: clean install
 {% endraw %}

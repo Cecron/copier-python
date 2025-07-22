@@ -11,10 +11,10 @@ This Copier template is my attempt at creating new Python projects easier on Win
 
 ## Requirement
 This Copier template takes advantage of the following, which needs to be installed[^1]:
-1. [Git](https://git-scm.com/downloads/)[^2]: Download and run installer
-2. [Uv](https://docs.astral.sh/uv/getting-started/installation/): Prefer the standalone installer method.
-3. [Copier](https://github.com/copier-org/copier/): `uv tool install copier`
-4. [Just](https://github.com/casey/just/releases): Download and run installer
+1. [Git](https://git-scm.com/downloads/): Download and run installer.[^2]
+2. [Uv](https://docs.astral.sh/uv/getting-started/installation/): Prefer standalone installer method.
+3. [Copier](https://github.com/copier-org/copier/): Run `uv tool install copier`.
+4. [Just](https://github.com/casey/just/releases): Download and extract binary.
 
 [^1]: All required software are available both for Windows and Linux.
 

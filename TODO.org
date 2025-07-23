@@ -1,43 +1,5 @@
 * Things to fix
-** DONE Add tests to the copier template                            :v0_5_0:
-CLOSED: [2025-07-22 Tue 18:41]
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2025-07-22 Tue 18:41]
-- State "TODO"       from              [2025-07-20 Sun 20:01]
-:END:
-
-Run copier copy with different answers:
-- use_subcommands :: y/n
-
-Run generated project:
-- script hello -n Mister
-- python -m package_name
-- python -m package_name hello -n Fred
-- python -m package_name -vv
-** DONE Add detailed description in README.md.jinja                 :v0_5_0:
-CLOSED: [2025-07-22 Tue 22:40]
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2025-07-22 Tue 22:40]
-- State "TODO"       from              [2025-07-22 Tue 18:41]
-:END:
-Describe how you use the Just recipes during python development.
-
-** ACTIVE Add detailed description in README.md                     :v0_5_0:
-:LOGBOOK:
-- State "ACTIVE"     from "TODO"       [2025-07-22 Tue 22:40]
-- State "TODO"       from              [2025-07-22 Tue 18:41]
-:END:
-Describe how you use the Just recipes during template development.
-
-** TODO Add selection of multiple Licenses                          :v0_5_0:
-:LOGBOOK:
-- State "TODO"       from              [2025-07-20 Sun 19:54]
-:END:
-Select between:
-- CC-BY-4
-- MIT
-
-** TODO Add Sphinx documentation                                    :v0_6_0:
+** TODO Improve Sphinx documentation
 :LOGBOOK:
 - State "TODO"       from "ACTIVE"     [2025-07-21 Mon 17:56]
 - State "ACTIVE"     from "TODO"       [2025-07-21 Mon 15:37]
@@ -45,6 +7,10 @@ Select between:
 :END:
 Will this initially be run using tox?
 - [ ] Include README.md (convert to rst?)
+** TODO Add choice between CLI and library project
+:LOGBOOK:
+- State "TODO"       from              [2025-07-23 Wed 16:22]
+:END:
 ** MAYBE Add selection of multiple backends
 :LOGBOOK:
 - State "MAYBE"      from "TODO"       [2025-07-21 Mon 17:55]

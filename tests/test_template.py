@@ -1,8 +1,13 @@
 import plumbum
 
 def test_template_copy(copie):
-    result = copie.copy()
+    """Test that template generation works with default answers
 
+    Make sure that no errors were reported, and that at least one file
+    got generated.
+
+    """
+    result = copie.copy()
     assert result.exit_code == 0
     assert result.exception is None
     assert result.project_dir.is_dir()
@@ -13,6 +18,11 @@ def test_template_copy(copie):
 
 
 def test_just_cov(copie):
+    """Test the 'just cov' command
+
+    Make sure that the index of the coverage report is created.
+
+    """
     result = copie.copy()
     assert result.exit_code == 0
     assert result.exception is None
@@ -24,6 +34,13 @@ def test_just_cov(copie):
 
 
 def test_just_lint(copie):
+    """Test the 'just lint' command
+
+    Make sure that running ruff format and linting did not fail.
+    The main purpose of this test is to verify that we have no
+    formating or linting errors in the generated project.
+
+    """
     result = copie.copy()
     assert result.exit_code == 0
     assert result.exception is None
@@ -35,6 +52,12 @@ def test_just_lint(copie):
 
 
 def test_just_html(copie):
+    """Test the 'just html' command
+
+    Make sure that the index page of from the documentation generation
+    is created.
+
+    """
     result = copie.copy()
     assert result.exit_code == 0
     assert result.exception is None

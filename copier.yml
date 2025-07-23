@@ -37,23 +37,22 @@ use_subcommands:
   help: Should I prepare this project for implementing subcommands?
   default: true
 
-
-# copyright_license:
-#   type: str
-#   help: Which license should be used?
-#   choices:
-#     - "CC-BY-4.0"
-#   default: "CC-BY_4.0"
+copyright_license:
+  type: str
+  help: Which license should be used?
+  choices:
+    - "GNU GPLv3"
+    - "MIT"
+    - "Unlicense"
+  default: "GNU GPLv3"
 
 pip_in_venv:
   type: bool
   help: Should pip be installed into .venv?
   default: true
 
-# _exclude:
-#     - ".git"
-#     # Don't match emacs backup files
-#     - "*~"
+_exclude:
+  - "LICENSE_*"
 
 _tasks:
   - working_directory: "."

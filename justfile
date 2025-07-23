@@ -10,18 +10,18 @@ ARGS_TEST := env("_UV_RUN_ARGS_TEST", "")
 test *args:
     uv run {{ ARGS_TEST }} -m pytest {{ args }}
 
-# ensure project virtualenv is up to date
+# ensure we have an up-to-date Python virtual environment
 [group('lifecycle')]
 install:
     if [ ! -d ".venv" ]; then uv venv --seed; fi
     uv pip install -r requirements.txt
 
-# remove temporary files
+# remove Python virtual environment and temporary files
 [group('lifecycle')]
 clean:
     rm -rf .venv .pytest_cache
     find . -type d -name "__pycache__" -exec rm -r {} +
 
-# regenerate project from scratch
+# regenerate Python virtual environment from scratch
 [group('lifecycle')]
 fresh: clean install

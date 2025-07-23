@@ -77,10 +77,14 @@ Clone the copier-python repository.
 C:\> git clone git@github.com:Cecron/copier-python
 ```
 
-You may now go into the cloned directory and edit the template.
+Go into the cloned directory and setup a Python virtual environment using the just command.
 ``` shell
 C:\> cd copier-python
+C:\> just install
 ```
+
+You may now edit the template.
+
 
 ## Generating and Updating project
 When the template is ready for testing, generate a project from the local copy of the copier-python template
@@ -98,7 +102,7 @@ C:\> cd ../copier-python
 C:\> git add . && git commit
 ```
 
-We need to stand in the same directory as when the project was generated, since the path to the template in `.copier-answers.yml` is relative.
+We also need to be standing in the same directory as when the project was generated, since the path to the template in `.copier-answers.yml` is relative.
 
 ``` shell
 C:\copier-template> cd ..
@@ -118,6 +122,6 @@ Useful arguments to `copier update`:
 Run tests that generates a project from the template and runs some Just commands in the newly generated project.
 
 ``` shell
-C:\> cd copier-template
-C:\copier-template> uv run -m pytest
+C:\> cd copier-python
+C:\copier-python> uv run -m pytest
 ```

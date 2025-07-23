@@ -184,3 +184,77 @@ CLOSED: [2025-07-22 Tue 13:14]
 - State "TODO"       from              [2025-07-20 Sun 20:22]
 :END:
 
+
+* DONE Add selection of multiple Licenses                            :v0_5_0:
+CLOSED: [2025-07-23 Wed 16:21]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-23 Wed 16:21
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-23 Wed 16:21]
+- State "TODO"       from              [2025-07-20 Sun 19:54]
+:END:
+Select between:
+- CC-BY-4
+- MIT
+
+
+* DONE Add tests to the copier template                              :v0_5_0:
+CLOSED: [2025-07-22 Tue 18:41]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-23 Wed 16:21
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-22 Tue 18:41]
+- State "TODO"       from              [2025-07-20 Sun 20:01]
+:END:
+
+Run copier copy with different answers:
+- use_subcommands :: y/n
+
+Run generated project:
+- script hello -n Mister
+- python -m package_name
+- python -m package_name hello -n Fred
+- python -m package_name -vv
+
+* DONE Add detailed description in README.md.jinja                   :v0_5_0:
+CLOSED: [2025-07-22 Tue 22:40]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-23 Wed 16:21
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2025-07-22 Tue 22:40]
+- State "TODO"       from              [2025-07-22 Tue 18:41]
+:END:
+Describe how you use the Just recipes during python development.
+
+
+* DONE Add detailed description in README.md                         :v0_5_0:
+CLOSED: [2025-07-23 Wed 16:21]
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-07-23 Wed 16:21
+:ARCHIVE_FILE: c:/proj/copier/copier-python/TODO.org
+:ARCHIVE_OLPATH: Things to fix
+:ARCHIVE_CATEGORY: TODO
+:ARCHIVE_TODO: DONE
+:END:
+:LOGBOOK:
+- State "DONE"       from "ACTIVE"     [2025-07-23 Wed 16:21]
+- State "ACTIVE"     from "TODO"       [2025-07-22 Tue 22:40]
+- State "TODO"       from              [2025-07-22 Tue 18:41]
+:END:
+Describe how you use the Just recipes during template development.
+

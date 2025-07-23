@@ -7,7 +7,7 @@ DOCS_PORT := env("_SPHINX_AUTOBUILD_PORT", "0")
 @_:
     just --list --justfile '{{ justfile() }}'
 
-# run tests
+# run Pytest
 [group('qa')]
 test *args:
     uv run {{ ARGS_TEST }} -m pytest {{ args }}
@@ -27,7 +27,7 @@ _cov *args:
     just _cov report
     just _cov html
 {% raw %}
-# run linters
+# run Ruff linter and formatter
 [group('qa')]
 lint:
     uvx ruff check --fix
@@ -37,17 +37,17 @@ lint:
 [group('qa')]
 check-all: lint cov
 
-# run sphinx to build html documentation
+# run Sphinx to build html documentation
 [group('docs')]
 html:
-    sphinx-build -M html "docs/source" "docs/build"
+    uv run -m sphinx -b html "docs/source" "docs/build/html"
 
 # serve html documentation
 [group('docs')]
 serve *args:
     sphinx-autobuild --port {{ DOCS_PORT }} --open-browser {{ args }} docs/source docs/build/html
 
-# upgrade dependencies
+# upgrade dependencies in pyproject.toml
 [group('lifecycle')]
 upgrade:
     uv sync --upgrade
@@ -58,7 +58,7 @@ install:
     if [ ! -d ".venv" ]; then uv venv --seed; fi
     uv sync
 
-# remove temporary files
+# remove all built files
 [group('lifecycle')]
 clean:
     rm -rf .venv .pytest_cache .ruff_cache .coverage htmlcov
@@ -66,10 +66,10 @@ clean:
     rm -rf docs/build
     find . -type d -name "__pycache__" -exec rm -r {} +
 
-# Recreate project virtualenv from nothing
+# recreate projects virtualenv from scratch
 [group('lifecycle')]
 fresh: clean install
 {% endraw %}
 
-# run main recepies: fresh, check-all, html
+# run all main recepies: fresh, check-all, html
 all: fresh check-all html

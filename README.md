@@ -9,7 +9,7 @@ This Copier template is my attempt at creating new Python projects easier on Win
   * [Pytest](https://docs.pytest.org/en/stable/): Makes it easy to write small, readable tests, and can scale to support complex functional testing for applications and libraries.
   * [Sphinx-autobuild](https://github.com/sphinx-doc/sphinx-autobuild): Rebuilds Sphinx documentation on changes, with hot reloading in the browser.
 
-## Requirement
+## Requirements
 This Copier template takes advantage of the following, which needs to be installed[^1]:
 1. [Git](https://git-scm.com/downloads/): Download and run installer.[^2]
 2. [Uv](https://docs.astral.sh/uv/getting-started/installation/): Prefer standalone installer method.

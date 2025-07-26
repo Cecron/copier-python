@@ -5,7 +5,7 @@ ARGS_TEST := env("_UV_RUN_ARGS_TEST", "")
 @_:
     just --list --justfile '{{ justfile() }}'
 
-# run tests (good argument is --keep-copied-projects)
+# run tests  Try -n auto (for xdist) or --keep-copied-projects
 [group('qa')]
 test *args:
     uv run {{ ARGS_TEST }} -m pytest {{ args }}

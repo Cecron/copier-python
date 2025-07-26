@@ -1,2 +1,3 @@
-pytest
-pytest-copie
+pytest>=8.4.1
+pytest-copie>=0.2.2
+pytest-xdist>=3.8.0

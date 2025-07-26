@@ -125,3 +125,6 @@ Run tests that generates a project from the template and runs some Just commands
 C:\> cd copier-python
 C:\copier-python> uv run -m pytest
 ```
+
+Pytest xdist can greatly reduce the testing time here.
+Running `just test`, currently runs 7 tests in ~52s, `just test -n 7` decreased the time down to ~25s.

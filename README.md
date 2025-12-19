@@ -15,6 +15,7 @@ This Copier template takes advantage of the following, which needs to be install
 2. [Uv](https://docs.astral.sh/uv/getting-started/installation/): Prefer standalone installer method.
 3. [Copier](https://github.com/copier-org/copier/): Run `uv tool install copier`.
 4. [Just](https://github.com/casey/just/releases): Download and extract binary.
+5. [direnv](https://direnv.net/) (optional): Run `curl -sfL https://direnv.net/install.sh | bin_path=~/.local/bin bash` and [hook into your shell](https://direnv.net/docs/hook.html).
 
 [^1]: All required software are available both for Windows and Linux.
 
@@ -128,3 +129,4 @@ C:\copier-python> uv run -m pytest
 
 Pytest xdist can greatly reduce the testing time here.
 Running `just test`, currently runs 7 tests in ~52s, `just test -n 7` decreased the time down to ~25s.
+

@@ -45,7 +45,7 @@ html:
 # serve html documentation
 [group('docs')]
 serve *args:
-    sphinx-autobuild --port {{ DOCS_PORT }} --open-browser {{ args }} docs/source docs/build/html
+    uv run sphinx-autobuild --port {{ DOCS_PORT }} --open-browser {{ args }} docs/source docs/build/html
 
 # upgrade dependencies in pyproject.toml
 [group('lifecycle')]

@@ -22,7 +22,7 @@ _cov *args:
     just _cov run -m pytest tests
     # Ensure entrypoint is importable.
     # You can also use coverage to run your CLI entrypoints.
-    just _cov run -m {{ package_name }} hello -n Everyone
+    just _cov run -m {{ package_name }} {% if use_subcommands %} hello -n Everyone {% endif %}
     just _cov combine
     just _cov report
     just _cov html

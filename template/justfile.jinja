@@ -33,9 +33,14 @@ lint:
     uvx ruff check --fix
     uvx ruff format
 
+# run type checker ty
+[group('qa')]
+typing:
+    uvx ty check --python .venv src
+
 # perform all checks
 [group('qa')]
-check-all: lint cov
+check-all: lint cov typing
 
 # run Sphinx to build html documentation
 [group('docs')]
